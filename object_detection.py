@@ -1,9 +1,11 @@
 import ultralytics as ut
 from ultralytics import YOLO
 model = YOLO('yolo11n.pt')
-predict_class = [0,14]
+#predict_class = [0,14]
 img = 'avengers-infinity-war-cast.jpg'
-pred = model(img, classes = predict_class, conf = .4)
+#pred = model(img, classes = predict_class, conf = .4)
+
+pred = model(img, conf = .4)
 
 #count the number of objects class-wise
 
